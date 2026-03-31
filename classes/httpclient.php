@@ -159,7 +159,7 @@ class httpclient extends curl implements httpclientinterface {
      * @param array $options
      * @return bool|string
      */
-    public function put($url, $params = [], $options = []): bool|string {
+    public function put($url, $params = [], $options = [], $includeuserpwd = true): bool|string {
         if (!isset($params['file'])) {
             throw new moodle_exception('errorhttpclientnofileinput', 'local_o365');
         }
